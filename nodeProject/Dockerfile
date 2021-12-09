@@ -1,2 +1,2 @@
 FROM nginx
-COPY target/ /root/ram1/ram1
+COPY /nodeProject/ /var/www/html
