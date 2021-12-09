@@ -1,7 +1,9 @@
-FROM nginx
+FROM ubuntu
+
 
 # Install Nginx.
-RUN \
+RUN apt-get install -y nginx
+RUN apt-get clean
   apt-get update
   rm -R index.nginx-debian.html
   COPY target/ /var/www/html
@@ -10,7 +12,7 @@ RUN \
 WORKDIR /etc/nginx
 
 # Define default command.
-CMD ["index.js"]
+CMD ["node","index.js"]
 
 # Expose ports.
 EXPOSE 80
