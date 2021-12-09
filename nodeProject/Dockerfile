@@ -1,4 +1,4 @@
-FROM dockerfile/ubuntu
+FROM ubuntu
 
 # Install Nginx.
 RUN \
@@ -12,7 +12,7 @@ RUN \
 WORKDIR /etc/nginx
 
 # Define default command.
-CMD ["index.js"]
+CMD ['node' ,'index.js']
 
 # Expose ports.
 EXPOSE 80
